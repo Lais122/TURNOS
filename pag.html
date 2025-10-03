@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>dia tarde noite</title>
+  <link rel="stylesheet" href="pag.css" />
+</head>
+
+<body>
+
+  <a href="index.html">voltar ao inicio</a>
+
+  <header>
+    <h1 id="titulo">bem vindo</h1>
+    <h2 id="subtitulo">escolha uma das opcoes</h2>
+  </header>
+
+  <div class="botoes">
+    <input type="button" value="manha" onclick="mudarTema('manha')" />
+    <input type="button" value="tarde" onclick="mudarTema('tarde')" />
+    <input type="button" value="noite" onclick="mudarTema('noite')" />
+  </div>
+
+  <br><br>
+
+  <img id="foto">
+  <div id="titulo"></div>
+  <div id="subtitulo"></div>
+  <div id="rodape"></div>
+
+  <script>
+    function mudarTema(tema){
+      var titulo = document.getElementById("titulo")
+      var subtitulo = document.getElementById("subtitulo")
+      var img = document.getElementById("foto")
+      var rodape = document.getElementById("rodape")
+
+      if (tema=="manha"){
+        document.body.style.background = "#89d6f5"
+        titulo.innerHTML = "bom dia"
+        subtitulo.innerHTML = "hora de cordar"
+        img.src = "img/manha.jpg"
+        rodape.innerHTML = "agora e manha"
+      }
+      else if (tema=="tarde"){
+        document.body.style.background = "#FFE4B5"
+        titulo.innerHTML = "boa tarde"
+        subtitulo.innerHTML = "boa tarde hoar de ir ao curso"
+        img.src = "img/tarde.jpg"
+        rodape.innerHTML = "agora e tarde"
+      }
+      else if (tema=="noite"){
+        document.body.style.background = "#191970"
+        titulo.innerHTML = "boa noite"
+        subtitulo.innerHTML = "hr de descansar"
+        img.src = "img/noite20.jpg"
+        rodape.innerHTML = "agora e noite"
+      }
+    }
+
+    
+    var agora = new Date()
+    var dia = agora.getDate()
+    var mes = agora.getMonth()+1
+    var ano = agora.getFullYear()
+    var hora = agora.getHours()
+    var min = agora.getMinutes()
+    var seg = agora.getSeconds()
+
+    document.write(`hoje é ${dia}/${mes}/${ano} - agora sao ${hora}:${min}:${seg}`)
+
+    if (hora>=6 && hora<12){
+      mudarTema("manha")
+    }
+    else if (hora>=12 && hora<18){
+      mudarTema("tarde")
+    }
+    else{
+      mudarTema("noite")
+    }
+  </script>
+ 
+
+</body>
+</html>
