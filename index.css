@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(255, 255, 255);
+    background-image: url("lais.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.box{
+   text-align: center;
+   border-radius: 10px;
+   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.253);
+   background: rgb(247, 182, 212);
+   width: 300px;
+   padding: 50px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.cad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
