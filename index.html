@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff006a">
+    <title>MOBILES</title> 
+</head>
+
+<body>
+<div class="cad">
+   <div class="box login-box" id= loginBox>
+    CADASTRO
+    <br>
+    <input id="cad" type="text">
+    <br>
+    SENHA 
+    <br>
+    <input type="password"id="senha" type="number">
+    <br> <br>
+    <button onclick="entrada()">ENTRADA</button>
+    </div> 
+</div>
+    
+    <script>
+function entrada(){
+    var cad = document.getElementById("cad").value 
+    var senha = document.getElementById("senha").value
+
+        if ( cad =="cad" && senha =="123"){
+            window.location.href= "pag.html"
+        }else{
+            document.write("senha incorreta")
+        }
+
+}
+    </script>
+
+
+
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script>
+
+
+</body>
+</html>
